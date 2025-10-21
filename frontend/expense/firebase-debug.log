@@ -1,0 +1,357 @@
+[debug] [2025-10-15T22:33:06.589Z] ----------------------------------------------------------------------
+[debug] [2025-10-15T22:33:06.590Z] Command:       /Users/avantikapandey/.nvm/versions/node/v20.19.4/bin/node /Users/avantikapandey/.nvm/versions/node/v20.19.4/bin/firebase emulators:start --only functions
+[debug] [2025-10-15T22:33:06.590Z] CLI Version:   14.19.1
+[debug] [2025-10-15T22:33:06.590Z] Platform:      darwin
+[debug] [2025-10-15T22:33:06.591Z] Node Version:  v20.19.4
+[debug] [2025-10-15T22:33:06.591Z] Time:          Thu Oct 16 2025 04:03:06 GMT+0530 (India Standard Time)
+[debug] [2025-10-15T22:33:06.591Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-15T22:33:06.708Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-15T22:33:06.708Z] > authorizing via signed-in user (avantika2004pandey@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-10-15T22:33:06.778Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-15T22:33:06.778Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-10-15T22:33:06.781Z] Emulator locator file path: /var/folders/11/gkkq7vls5r96x3_y_scy4_yc0000gn/T/hub-expensetracker-6048c.json
+[debug] [2025-10-15T22:33:06.781Z] [hub] writing locator at /var/folders/11/gkkq7vls5r96x3_y_scy4_yc0000gn/T/hub-expensetracker-6048c.json
+[debug] [2025-10-15T22:33:06.847Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-15T22:33:06.847Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-15T22:33:06.847Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-15T22:33:06.847Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-10-15T22:33:06.852Z] defaultcredentials: writing to file /Users/avantikapandey/.config/firebase/avantika2004pandey_gmail_com_application_default_credentials.json
+[debug] [2025-10-15T22:33:06.853Z] Setting GAC to /Users/avantikapandey/.config/firebase/avantika2004pandey_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/avantikapandey/.config/firebase/avantika2004pandey_gmail_com_application_default_credentials.json"}}
+[debug] [2025-10-15T22:33:06.853Z] Checked if tokens are valid: true, expires at: 1760570511953
+[debug] [2025-10-15T22:33:06.853Z] Checked if tokens are valid: true, expires at: 1760570511953
+[debug] [2025-10-15T22:33:06.853Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/expensetracker-6048c/adminSdkConfig [none]
+[debug] [2025-10-15T22:33:07.586Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/expensetracker-6048c/adminSdkConfig 200
+[debug] [2025-10-15T22:33:07.586Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/expensetracker-6048c/adminSdkConfig {"projectId":"expensetracker-6048c","storageBucket":"expensetracker-6048c.firebasestorage.app"}
+[info] i  functions: Watching "/Users/avantikapandey/newtracker/frontend/expense/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/avantikapandey/newtracker/frontend/expense/functions\" for Cloud Functions..."}}
+[debug] [2025-10-15T22:33:07.614Z] Validating nodejs source
+[debug] [2025-10-15T22:33:09.167Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-15T22:33:09.167Z] Building nodejs source
+[debug] [2025-10-15T22:33:09.167Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-15T22:33:09.169Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-15T22:33:09.172Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8968
+
+[debug] [2025-10-15T22:33:09.416Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":10,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/expensetracker-6048c/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/expensetracker-6048c/us-central1/helloWorld)."}}
+[debug] [2025-10-15T22:33:13.441Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-10-15T22:34:23.444Z] [work-queue] {"queuedWork":["/expensetracker-6048c/us-central1/helloWorld-2025-10-15T22:34:23.443Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-15T22:34:23.445Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/expensetracker-6048c/us-central1/helloWorld-2025-10-15T22:34:23.443Z"],"workRunningCount":1}
+[debug] [2025-10-15T22:34:23.445Z] Accepted request GET /expensetracker-6048c/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2025-10-15T22:34:23.449Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-10-15T22:34:23.449Z] [functions] Got req.url=/expensetracker-6048c/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/expensetracker-6048c/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2025-10-15T22:34:23.454Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2025-10-15T22:34:23.455Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2025-10-15T22:34:23.993Z] [runtime-status] [18748] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-10-15T22:34:23.994Z] [runtime-status] [18748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-15T22:34:23.994Z] [runtime-status] [18748] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-10-15T22:34:23.994Z] [runtime-status] [18748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-15T22:34:24.137Z] [runtime-status] [18748] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-10-15T22:34:24.137Z] [runtime-status] [18748] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js\"}}"}}
+[debug] [2025-10-15T22:34:24.137Z] [runtime-status] [18748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-15T22:34:24.138Z] [runtime-status] [18748] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-10-15T22:34:24.139Z] [runtime-status] [18748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-15T22:34:24.139Z] [runtime-status] [18748] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2025-10-15T22:34:24.142Z] [runtime-status] [18748] Functions runtime initialized. {"cwd":"/Users/avantikapandey/newtracker/frontend/expense/functions","node_version":"20.19.4"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Functions runtime initialized. {\"cwd\":\"/Users/avantikapandey/newtracker/frontend/expense/functions\",\"node_version\":\"20.19.4\"}"}}
+[debug] [2025-10-15T22:34:24.142Z] [runtime-status] [18748] Listening to port: /var/folders/11/gkkq7vls5r96x3_y_scy4_yc0000gn/T/fire_emu_0e04e1a4fff72ce6.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [18748] Listening to port: /var/folders/11/gkkq7vls5r96x3_y_scy4_yc0000gn/T/fire_emu_0e04e1a4fff72ce6.sock"}}
+[debug] [2025-10-15T22:34:24.168Z] [worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: IDLE"}}
+[debug] [2025-10-15T22:34:24.168Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[info] i  functions: Beginning execution of "us-central1-helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"us-central1-helloWorld\""}}
+[debug] [2025-10-15T22:34:24.168Z] [worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: BUSY"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2025-10-15T22:34:24.171Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloWorld" in 2.592416ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"us-central1-helloWorld\" in 2.592416ms"}}
+[debug] [2025-10-15T22:34:24.171Z] [worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: IDLE"}}
+[debug] [2025-10-15T22:34:24.171Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-10-15T22:34:24.171Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-10-15T22:34:24.171Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-15T22:35:33.054Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/package-lock.json changed, reloading triggers"}}
+[debug] [2025-10-15T22:35:33.055Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers"}}
+[debug] [2025-10-15T22:35:34.055Z] Validating nodejs source
+[debug] [2025-10-15T22:35:34.340Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-15T22:35:34.340Z] Building nodejs source
+[debug] [2025-10-15T22:35:34.340Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-15T22:35:34.341Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-15T22:35:34.341Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8061
+
+[debug] [2025-10-15T22:35:34.602Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":10,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2025-10-15T22:35:38.620Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2025-10-15T22:35:38.620Z] [worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: FINISHING"}}
+[debug] [2025-10-15T22:35:38.626Z] [worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: exited"}}
+[debug] [2025-10-15T22:35:38.626Z] [worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-b3a6afe6-3b96-46e0-be6b-b78f8db89461]: FINISHED"}}
+[debug] [2025-10-15T22:45:30.791Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers"}}
+[debug] [2025-10-15T22:45:31.393Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers"}}
+[debug] [2025-10-15T22:45:32.397Z] Validating nodejs source
+[debug] [2025-10-15T22:45:33.094Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-15T22:45:33.094Z] Building nodejs source
+[debug] [2025-10-15T22:45:33.094Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-15T22:45:33.096Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-15T22:45:33.096Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8700
+
+[debug] [2025-10-15T22:45:33.366Z] Got response from /__/functions.yaml {"endpoints":{"sendTransactionEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendTransactionEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: sendTransactionEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendTransactionEmail."}}
+[info] ✔  functions[us-central1-sendTransactionEmail]: http function initialized (http://127.0.0.1:5001/expensetracker-6048c/us-central1/sendTransactionEmail). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/expensetracker-6048c/us-central1/sendTransactionEmail)."}}
+[debug] [2025-10-16T05:13:27.725Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers"}}
+[debug] [2025-10-16T05:13:28.732Z] Validating nodejs source
+[debug] [2025-10-16T05:13:29.457Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T05:13:29.457Z] Building nodejs source
+[debug] [2025-10-16T05:13:29.457Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-16T05:13:29.458Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T05:13:29.459Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-10-16T05:13:29.461Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers"}}
+[info] Serving at port 8085
+
+[debug] [2025-10-16T05:13:29.748Z] Got response from /__/functions.yaml {"endpoints":{"sendTransactionEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendTransactionEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-10-16T05:13:30.462Z] Validating nodejs source
+[debug] [2025-10-16T05:13:30.932Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T05:13:30.933Z] Building nodejs source
+[debug] [2025-10-16T05:13:30.933Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-16T05:13:30.933Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T05:13:30.934Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8745
+
+[debug] [2025-10-16T05:13:31.100Z] Got response from /__/functions.yaml {"endpoints":{"sendTransactionEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendTransactionEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: sendTransactionEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendTransactionEmail."}}
+[info] ✔  functions: Loaded functions definitions from source: sendTransactionEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendTransactionEmail."}}
+[debug] [2025-10-16T05:13:44.862Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers"}}
+[debug] [2025-10-16T05:13:45.771Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/index.js changed, reloading triggers"}}
+[debug] [2025-10-16T05:13:46.773Z] Validating nodejs source
+[debug] [2025-10-16T05:13:47.325Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T05:13:47.325Z] Building nodejs source
+[debug] [2025-10-16T05:13:47.325Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-16T05:13:47.326Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T05:13:47.327Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8958
+
+[debug] [2025-10-16T05:13:47.568Z] Got response from /__/functions.yaml {"endpoints":{"sendTransactionEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendTransactionEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: sendTransactionEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendTransactionEmail."}}
+[debug] [2025-10-16T05:38:15.580Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers"}}
+[debug] [2025-10-16T05:38:16.185Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers"}}
+[debug] [2025-10-16T05:38:17.187Z] Validating nodejs source
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions/package.json:
+
+ Unexpected token 's' at 6:6
+    "serve": "firebase emulators:start --only functions",
+     ^
+File: "/Users/avantikapandey/newtracker/frontend/expense/functions/package.json" {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions/package.json:\n\n Unexpected token 's' at 6:6\n    \"serve\": \"firebase emulators:start --only functions\",\n     ^\nFile: \"/Users/avantikapandey/newtracker/frontend/expense/functions/package.json\""}}
+[debug] [2025-10-16T05:38:17.718Z] File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/avantikapandey/newtracker/frontend/expense/functions/package.json changed, reloading triggers"}}
+[debug] [2025-10-16T05:38:18.720Z] Validating nodejs source
+[debug] [2025-10-16T05:38:19.028Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "echo 'Skipping lint'",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T05:38:19.028Z] Building nodejs source
+[debug] [2025-10-16T05:38:19.028Z] Failed to find version of module node: reached end of search path /Users/avantikapandey/newtracker/frontend/expense/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-10-16T05:38:19.029Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T05:38:19.030Z] Found firebase-functions binary at '/Users/avantikapandey/newtracker/frontend/expense/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8452
+
+[debug] [2025-10-16T05:38:19.303Z] Got response from /__/functions.yaml {"endpoints":{"sendTransactionEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendTransactionEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: sendTransactionEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendTransactionEmail."}}

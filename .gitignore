@@ -1,0 +1,15 @@
+# Node modules
+frontend/node_modules/
+backend/node_modules/
+npm-debug.log
+
+# Environment files
+frontend/.env
+backend/.env
+
+# VSCode settings
+.vscode/
+
+# Build / dist folders
+frontend/build/
+backend/dist/
